@@ -29,7 +29,7 @@ class MaoYanSpider(object):
             + '.*?name.*?a.*?>(.*?)</a>.*?star.*?主演：(.*?)</p>'
             + '.*?releasetime.*?上映时间：(.*?)</p>.*?integer.*?>(.*?)</i>'
             + '.*?fraction.*?>(.*?)</i>.*?</dd>', re.S)
-        results = re.findall(regex_compile, text)
+        results = regex_compile.findall(text)
         for res in results:
             yield {
                 "排名": res[0],
