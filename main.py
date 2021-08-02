@@ -87,6 +87,6 @@ if __name__ == '__main__':
         pool.apply_async(MaoYanSpider().run, args=(i*10, ))
     pool.close()
     pool.join()
-    print("------抓取猫眼排行榜结束------")
+    print("------抓取猫眼排行榜结束----")
     print("耗时{:.2f}秒".format(time.perf_counter() - start_time))
 
